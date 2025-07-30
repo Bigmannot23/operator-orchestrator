@@ -1,0 +1,31 @@
+name: Example Workflow
+description: Demonstration workflow for the Operator Agent Orchestrator
+tasks:
+  - id: ingest
+    plugin: csv_ingest
+    config:
+      # Path relative to the project root
+      path: operator_agent_orchestrator/examples/sample_data.csv
+    depends_on: []
+  - id: metrics
+    plugin: metrics
+    config:
+      # Explicitly declare numeric columns to compute metrics on
+      numeric_columns: [age, score]
+    depends_on:
+      - ingest
+  - id: greet
+    plugin: python_function
+    config:
+      # Call the greet function defined in plugin_example.py
+      function: operator_agent_orchestrator.examples.plugin_example:greet
+      args:
+        - Operator
+    depends_on:
+      - metrics
+  - id: announce
+    plugin: shell
+    config:
+      command: echo Workflow completed successfully!
+    depends_on:
+      - greet

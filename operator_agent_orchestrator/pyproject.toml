@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "operator_agent_orchestrator"
+version = "0.1.0"
+description = "Multi‑agent orchestration framework for operator‑grade workflows"
+authors = [
+    { name = "Alex Minnick", email = "" }
+]
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "pyyaml>=6.0",
+    "click>=8.0",
+    "pandas>=1.5",
+]
+
+[project.scripts]
+oprun = "operator_agent_orchestrator.__main__:app"
