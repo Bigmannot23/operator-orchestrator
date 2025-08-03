@@ -3,8 +3,8 @@
 An operator‑grade multi‑agent orchestration framework for building repeatable,
 auditable workflows.  This project was designed after studying the existing
 repositories in the Operator meta portfolio, such as the Job Offer Factory
-pipeline【931809230789610†L12-L18】, the Leadscore API【424943483667472†L12-L18】 and the Operator Metrics
-Dashboard【241691391405493†L12-L19】.  Those projects share common principles—automation, modularity and
+pipeline, the Leadscore API and the Operator Metrics
+Dashboard.  Those projects share common principles—automation, modularity and
 compounding learning—but each solves a very specific problem.  The
 Operator Agent Orchestrator generalises those ideas into a reusable engine
 for orchestrating heterogeneous tasks.
